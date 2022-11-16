@@ -21,9 +21,10 @@ import { MontantsComponent } from './montants/montants.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BulletinComponent } from './bulletin/bulletin.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent],
   imports: [
     CommonModule,
     FormsModule,
