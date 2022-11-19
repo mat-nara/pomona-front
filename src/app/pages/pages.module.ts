@@ -22,11 +22,11 @@ import { MontantsComponent } from './montants/montants.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BulletinComponent } from './bulletin/bulletin.component';
 import { AdministrationComponent } from './administration/administration.component';
-import { AccesComponent } from './administration/acces/acces.component';
+import { AccessComponent } from './administration/access/access.component';
 import { ConfigurationComponent } from './administration/configuration/configuration.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccesComponent, ConfigurationComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent],
   imports: [
     CommonModule,
     FormsModule,

@@ -8,7 +8,6 @@ import { RubriquesComponent } from './rubriques/rubriques.component';
 import { MontantsComponent } from './montants/montants.component';
 import { BulletinComponent } from './bulletin/bulletin.component';
 import { AdministrationComponent } from './administration/administration.component';
-
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
