@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ApiService } from 'src/app/core/services/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,15 +11,17 @@ import { ActivatedRoute } from '@angular/router';
 export class DashboardComponent implements OnInit {
   data1;
   deviceValue;
+  //val;
   dash: any = [];
-  selectedTeam='LMFR_M081-NIORT';
+  selectedTeam='POMONA PF MILLERY';
   etablissement;
   chargesPatronalesChart;
   linewithDataChart;
   chargesSalarialesChart;
   simplePieChart;
   
-  constructor(public apiService : ApiService,private route: ActivatedRoute) { 
+  constructor(public apiService : ApiService,private route: ActivatedRoute,public AppComponent : AppComponent) { 
+    //this.val=AppComponent.val
     this.fillCharts();
   }
   onChange(deviceValue){
