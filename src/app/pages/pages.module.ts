@@ -25,9 +25,10 @@ import { AdministrationComponent } from './administration/administration.compone
 import { AccessComponent } from './administration/access/access.component';
 import { ConfigurationComponent } from './administration/configuration/configuration.component';
 import { AvereesComponent } from './averees/averees.component';
+import { EchantillonageComponent } from './echantillonage/echantillonage.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent],
   imports: [
     CommonModule,
     FormsModule,

@@ -40,7 +40,7 @@ export const MENU: MenuItem[] = [
   },
   {
     label: 'Échantillonnage',
-    link: '/controle_echantillonnage',
+    link: '/echantillonnage',
     icon: 'bx-table'
   },
   {
