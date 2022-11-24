@@ -83,6 +83,8 @@ export class MontantsService {
       this._total$.next(result.total);
     });
     this._search$.next();
+
+    
   }
 
   /**

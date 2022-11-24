@@ -25,8 +25,8 @@ export class MasseComponent implements OnInit {
     this.data1 = this.apiService.sayHi().subscribe(data =>{
       this.data1 =   data as object;
     });
-
-    this.apiService.getMasse('POMONA TA IDF RUNGIS').subscribe(data =>{
+    var etab = localStorage.getItem('etab');
+    this.apiService.getMasse(etab).subscribe(data =>{
       this.dataMasse =  data as object;
       // this.dataMasse =  JSON.parse(data as string); 
     });

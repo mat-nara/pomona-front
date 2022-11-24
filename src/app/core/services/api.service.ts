@@ -38,6 +38,10 @@ getMasse(etablissement){
     return this.http.get('http://127.0.0.1:5000/masse?etablissement='+etablissement);
 }
 
+getAMontant(etablissement){
+  return this.http.get('http://127.0.0.1:5000/amontant?etablissement='+etablissement);
+}
+
 getaFlaguer(etablissement){
   return this.http.get('http://127.0.0.1:5000/aflaguer?etablissement='+etablissement)
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { ApiService } from 'src/app/core/services/api.service';
 import { MontantsService } from './montants.service';
 import { Table } from './montants.model';
 
@@ -11,10 +11,101 @@ import { Table } from './montants.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class MontantsComponent implements OnInit {
-
-  constructor(public service: MontantsService) {
+  dataMontant: any = [];
+  chartOptions2:any;
+  data: any=[];
+  constructor(public service: MontantsService,public apiService : ApiService) {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
+    var etab = localStorage.getItem('etab');
+    this.apiService.getAMontant(etab).subscribe(data =>{
+      this.dataMontant =  data as object;
+      //console.log(this.dataMontant.lenght())
+      for (let index = 0; index < 20; index++) {
+        this.data.push([
+          // risque:this.dataMontant[index]['Risque'], 
+          // degres:this.dataMontant[index]['Risque'], 
+          // erreur:this.dataMontant[index]['Erreur'],
+          this.dataMontant[index]['Risque'], 
+          this.dataMontant[index]['Risque'], 
+          this.dataMontant[index]['Erreur'],
+          
+        ])
+        
+        
+      }
+      console.log(this.data)
+      //this.dataMontant[0]['Risque']
+      this.chartOptions2 = {
+        series: [
+          {
+            name: "Bubble1",
+            data: this.data
+          },
+          {
+            name: "Bubble2",
+            data: [
+              [2.6, 2, 2]
+            ]
+          }
+        ],
+        chart: {
+          height: 450,
+          type: "bubble",
+          toolbar: {
+            show: false
+          },
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        fill: {
+          opacity: 0.8
+        },
+        title: {},
+        xaxis: {
+          min: 1,
+          max: 30,
+          tickAmount: 4,
+          tooltip: {
+            enabled: true
+          },
+          decimalsInFloat: 0
+        },
+        yaxis: {
+          min: 1,
+          max: 2,
+          decimalsInFloat: 0
+        },
+        grid: {
+          yaxis: {
+            lines: {
+              show: false,
+            }
+          }
+        },
+        legend: {
+          show: false
+        },
+        tooltip: {
+          custom: function({ series, seriesIndex, dataPointIndex, w }) {
+            return '<div class="arrow_box" style="padding: 5px">' +
+              '<span>' + '<b>Matricule</b> : 1724' + '</span>' +
+              '</div>'
+          }
+        },
+        zoom: {
+          enabled: false
+        }
+    
+    
+      }
+      // this.dataMasse =  JSON.parse(data as string); 
+    });
+    
   }
 
   tables$: Observable<Table[]>;
@@ -23,7 +114,7 @@ export class MontantsComponent implements OnInit {
   tableData = [];
 
   vue_mensuelle = true;
-
+  
   chartOptions = {
     series: [
       {
@@ -39,7 +130,7 @@ export class MontantsComponent implements OnInit {
           [1.83, 0.2, 12],
           [2, 0.4, 14],
           [4, 0, 7.5],
-          [3.9, -2, 4.5]
+          [3.9, -2, 4.5],
         ]
       },
       {
@@ -71,7 +162,7 @@ export class MontantsComponent implements OnInit {
       max: 5,
       tickAmount: 4,
       tooltip: {
-        enabled: false
+        enabled: true
       },
       decimalsInFloat: 0
     },
@@ -100,6 +191,8 @@ export class MontantsComponent implements OnInit {
     zoom: {
       enabled: false
     }
+
+
   };
 
   indicationArray = [

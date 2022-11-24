@@ -22,10 +22,12 @@ export class DashboardComponent implements OnInit {
   
   constructor(public apiService : ApiService,private route: ActivatedRoute,public AppComponent : AppComponent) { 
     //this.val=AppComponent.val
+    
     this.fillCharts();
   }
   onChange(deviceValue){
     this.deviceValue=deviceValue;
+    localStorage.setItem('etab', this.deviceValue);
     this.apiService.getDashbordData(this.deviceValue).subscribe(data =>{
       this.dash =  data; 
       this.fillCharts();

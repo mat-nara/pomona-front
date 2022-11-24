@@ -16,8 +16,8 @@ export class FlagComponent implements OnInit {
   constructor(public service: FlagService, public apiService : ApiService) {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
-
-    this.apiService.getaFlaguer('POMONA TA IDF RUNGIS').subscribe(data =>{
+    var etab = localStorage.getItem('etab');
+    this.apiService.getaFlaguer(etab).subscribe(data =>{
       this.dataFlag =  data as object;
       // this.dataMasse =  JSON.parse(data as string); 
     });
