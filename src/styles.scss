@@ -37,6 +37,11 @@ $ng-select-selected: $keolisBlue !default;
   background: $sidebar-dark-bg !important;
 }
 
+
+#sidebar-menu {
+  position: fixed;
+}
+
 .vertical-collpsed .vertical-menu #sidebar-menu {
   > ul > li:hover > a {
     background: lighten($sidebar-dark-bg, 2%) !important;
