@@ -24,9 +24,10 @@ import { BulletinComponent } from './bulletin/bulletin.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { AccessComponent } from './administration/access/access.component';
 import { ConfigurationComponent } from './administration/configuration/configuration.component';
+import { AvereesComponent } from './averees/averees.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent],
   imports: [
     CommonModule,
     FormsModule,

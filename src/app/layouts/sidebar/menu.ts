@@ -33,7 +33,7 @@ export const MENU: MenuItem[] = [
       },
       {
         label: 'Anomalies avérées',
-        link: '/anomalies_averees',
+        link: '/averees',
         parentId: 2
       },
     ]
