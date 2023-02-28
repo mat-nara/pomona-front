@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./echantillonage.component.scss']
 })
 export class EchantillonageComponent implements OnInit {
-  etablissements : string[] = ["Tous", "Etab1", "Etab2", "Etab3"];
-  categories : string[] = ["Toutes", "Cadre", "Expatrié"];
-  conventions : string[] = ["Toutes", "CCN1", "CCN2", "CCN3"];
+  etablissements : string[] = ["Terre Azure", "Passion Froid", "Epi Saveur", "Relais D'or",'Délices & Création',"Saveur d'Antoine"];
+  categories : string[] =  ['Ouvrier', ' Employé', ' Cadre supérieur', ' Cadre', ' TAM',
+  ' Assimilé cadre', ' IIIB'];
+  conventions : string[] = ["Commerce de gros", "Commerce de détail et de gros à prédominance alimentaire", "Industries charcutières", "Confiserie, chocolaterie, biscuiterie",'VRP'];
 
   constructor() { }
 

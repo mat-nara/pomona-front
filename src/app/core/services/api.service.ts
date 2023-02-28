@@ -38,8 +38,20 @@ getMasse(etablissement){
     return this.http.get('http://127.0.0.1:5000/masse?etablissement='+etablissement);
 }
 
-getAMontant(etablissement){
-  return this.http.get('http://127.0.0.1:5000/amontant?etablissement='+etablissement);
+getRubriques(etablissement){
+  return this.http.get('http://127.0.0.1:5000/rubriques?etablissement='+etablissement);
+}
+
+getRubriques_mat(etablissement,matricule){
+  return this.http.get('http://127.0.0.1:5000/rubriques_mat?etablissement='+etablissement+'&matricule='+matricule);
+}
+
+getAnom_av(){
+  return this.http.get('http://127.0.0.1:5000/anoamlies_pas');
+}
+
+getAMontant(){
+  return this.http.get('http://127.0.0.1:5000/amontant');
 }
 
 getaFlaguer(etablissement){

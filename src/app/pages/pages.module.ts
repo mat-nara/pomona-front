@@ -26,9 +26,10 @@ import { AccessComponent } from './administration/access/access.component';
 import { ConfigurationComponent } from './administration/configuration/configuration.component';
 import { AvereesComponent } from './averees/averees.component';
 import { EchantillonageComponent } from './echantillonage/echantillonage.component';
+import { BulrubriqueComponent } from './bulrubrique/bulrubrique.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent, BulrubriqueComponent],
   imports: [
     CommonModule,
     FormsModule,

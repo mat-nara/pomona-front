@@ -18,22 +18,23 @@ export class MontantsComponent implements OnInit {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
     var etab = localStorage.getItem('etab');
-    this.apiService.getAMontant(etab).subscribe(data =>{
+    this.apiService.getAMontant().subscribe(data =>{
       this.dataMontant =  data as object;
       //console.log(this.dataMontant.lenght())
-      for (let index = 0; index < 20; index++) {
-        this.data.push([
-          // risque:this.dataMontant[index]['Risque'], 
-          // degres:this.dataMontant[index]['Risque'], 
-          // erreur:this.dataMontant[index]['Erreur'],
-          this.dataMontant[index]['Risque'], 
-          this.dataMontant[index]['Risque'], 
-          this.dataMontant[index]['Erreur'],
+      for (let i = 0; i < 20; i++) {
+        console.log(this.dataMontant[i]["Degrès d'anomalie"])
+      this.data.push([
+      //     // risque:this.dataMontant[index]['Risque'], 
+      //     // degres:this.dataMontant[index]['Risque'], 
+      //     // erreur:this.dataMontant[index]['Erreur'],
+           this.dataMontant[i]["Degrès d'anomalie"], 
+           this.dataMontant[i]["Nombre d'erreurs"], 
+           this.dataMontant[i]['Estimation du risque'],
           
-        ])
+         ])
         
         
-      }
+       }
       console.log(this.data)
       //this.dataMontant[0]['Risque']
       this.chartOptions2 = {

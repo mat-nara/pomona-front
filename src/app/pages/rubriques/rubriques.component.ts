@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { RubriquesService } from './rubriques.service';
+import { ApiService } from 'src/app/core/services/api.service';
 import { Table } from './rubriques.model';
 
 @Component({
@@ -11,10 +12,23 @@ import { Table } from './rubriques.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class RubriquesComponent implements OnInit {
-
-  constructor(public service: RubriquesService) {
+  dataRubriques: any = [];
+  constructor(public service: RubriquesService, public apiService : ApiService) {
     this.tables$ = service.tables$;
     this.total$ = service.total$;
+    
+    var etab = localStorage.getItem('etab');
+    this.apiService.getRubriques(etab).subscribe(data =>{
+      this.dataRubriques =  data as object;
+      
+     
+    });
+    
+
+    // this.apiService.getMasse(etab).subscribe(data =>{
+    //   this.dataMasse =  data as object;
+    //   // this.dataMasse =  JSON.parse(data as string); 
+    // });
   }
 
   tables$: Observable<Table[]>;

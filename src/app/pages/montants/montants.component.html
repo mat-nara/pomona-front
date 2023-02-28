@@ -39,10 +39,10 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title mb-0">Représentation graphique des anomalies</h4>
-          <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [xaxis]="chartOptions2.xaxis"
-            [fill]="chartOptions2.fill" [dataLabels]="chartOptions2.dataLabels" [title]="chartOptions2.title"
-            [yaxis]="chartOptions2.yaxis" [grid]="chartOptions2.grid" [legend]="chartOptions2.legend"
-            [tooltip]="chartOptions2.tooltip"></apx-chart>
+          <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+            [fill]="chartOptions.fill" [dataLabels]="chartOptions.dataLabels" [title]="chartOptions.title"
+            [yaxis]="chartOptions.yaxis" [grid]="chartOptions.grid" [legend]="chartOptions.legend"
+            [tooltip]="chartOptions.tooltip"></apx-chart>
           <p class="text-muted my-2 ms-3" style="font-size: 110%"> <b style="font-size: 130%">Indication</b> : Variation
             anormale du Brut sur l'année</p>
         </div>
@@ -59,35 +59,7 @@
           </div>
         </div>
         <div class="col-xl-5 d-flex">
-          <div class="card mini-stats-wid flex-fill">
-            <div class="card-body">
-              <div class="row d-flex align-items-center" style="height: 100%;">
-                <div class="col-xl-5">
-                  <p class="text-muted text-center mb-0" style="font-size: 120%; height: 100%; font-weight: bold;">Etat</p>
-                </div>
-                <div class="col-xl-5 d-flex flex-row justify-content-around align-items-center" style="height: 100%;">
-                  <div class="form-check form-radio-outline form-radio-success">
-                    <input class="form-check-input" type="radio" name="formRadio2" id="formRadio2" checked>
-                    <label class="form-check-label text-muted" for="formRadio2">
-                      Tous
-                    </label>
-                  </div>
-                  <div class="form-check form-radio-outline form-radio-success">
-                    <input class="form-check-input" type="radio" name="formRadio2" id="formRadio2" checked>
-                    <label class="form-check-label text-muted" for="formRadio2">
-                      Contrôlés
-                    </label>
-                  </div>
-                  <div class="form-check form-radio-outline form-radio-success">
-                    <input class="form-check-input" type="radio" name="formRadio2" id="formRadio2" checked>
-                    <label class="form-check-label text-muted" for="formRadio2">
-                      Non contrôlés
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div class="card flex-fill">
@@ -111,15 +83,31 @@
             <table class="table table-centered table-nowrap">
               <thead class="table-light">
                 <tr>
-                  <th width="5%">Matricule</th>
+                  <th>Matricule</th>
                   <th>Indication</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let item of dataMontant">
-                  <th width="5%">{{item['Matricule']}}</th>
-                  <td>{{item['Indication']}}</td>
-                 
+                  <th>{{item['index']}}</th>
+                  <td style="text-align: left">{{item['Indication']}}</td>
+                  <td style="text-align: left;">
+                    <div ngbDropdown placement="bottom-left">
+                      <i class="mdi mdi-dots-vertical dropdown-toggle font-size-20" ngbDropdownToggle data-toggle="dropdown"
+                        aria-expanded="true"></i>
+                      <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <a class="dropdown-item" [routerLink]="['/bulletin']" [queryParams]="{matricule:item['index'],bulletin:item['Bulletin'],contrat:item['Contrat']}">
+                          <i class="bx bx-show text-info font-size-20"></i>
+                          Voir les détails
+                        </a>
+                        <a class="dropdown-item">
+                          <i class="bx bx-download text-success font-size-20"></i>
+                          Annoter le bulletin
+                        </a>
+                      </div>
+                    </div>
+                  </td>
               </tbody>
             </table>
           </div>

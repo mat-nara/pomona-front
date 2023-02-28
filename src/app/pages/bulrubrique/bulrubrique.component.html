@@ -40,42 +40,51 @@
                 </div>
               </div>
             </div>
-            <div class="table-responsive" style="min-height: 500px">
+            <div class="table-responsive" >
               <table class="table table-centered table-nowrap">
                 <thead class="table-light">
                   <tr>
                     <th>Matricule</th>
-                    <th>Période</th>
                     <th>Statut</th>
                     <th>CCN</th>
-                    <th>Libellé</th>n
-                    <th>Base</th>
-                    <th>Nombre</th>
-                    <th>Montant salarial</th>
-                    <th>Taux salarial</th>
-                    <th>Montant patronal</th>
-                    <th>Taux patronal</th>
+                    <th>Succursale</th>
+                    <th>Rubrique Manquantes</th>
                   </tr>
                 </thead>
                 <tbody>
-                  
-
-                  <tr *ngFor="let item of bpdetail">
+                  <tr *ngFor="let item of bulrubrique">
                     <th>{{item['Matricule']}}</th>
-                    <td>{{item['Periode']}}</td>
                     <td>{{item['Statut']}}</td>
                     <td>{{item['CCN']}}</td>
-                    <td>{{item['Libellé']}}</td>
-                    <td>{{item['Base']}}</td>
-                    <td>{{item['Nombre']}}</td>
-                    <td>{{item['Montant salarial']}}</td>
-                    <td>{{item['Taux Salarial']}}</td>
-                    <td>{{item['Montant Patronal']}}</td>
-                    <td>{{item['Taux Patronal']}}</td>
+                    <td>{{item['Succursale']}}</td>
+                    <td>{{item['rub_manq']}}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            <div class="table-responsive">
+                <table style="width:100%!important; table-layout: fixed;" class="table table-centered table-nowrap">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Matricule</th>
+                      <th>Statut</th>
+                      <th>CCN</th>
+                      <th>Succursale</th>
+                      <th>Rubrique Incorrectes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of bulrubrique">
+                      <th>{{item['Matricule']}}</th>
+                      <td>{{item['Statut']}}</td>
+                      <td>{{item['CCN']}}</td>
+                      <td>{{item['Succursale']}}</td>
+                      <td>{{item['rub_inc']}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             
             </div>
           </div>

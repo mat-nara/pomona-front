@@ -2,7 +2,7 @@
     <div class="row mb-4 align-items-center">
         <div class="col-sm-6">
             <div class="page-title-box p-0">
-                <h4 class="mb-0 font-size-18">Echantillonnage de contrôle</h4>
+                <h4 class="mb-0 font-size-18">CONTROLE PAR ECHANTILLONAGE</h4>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="col-md-4">
             <div class="card" style="height: auto;">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Etablissements</h4>
+                    <h4 class="card-title mb-4">Succursale</h4>
                     <div class="form-check" *ngFor="let etab of etablissements; let index = index">
                         <input class="form-check-input" type="checkbox" name="etablissement" value={{index}} id="etab_{{index}}">
                         <label class="col-md-auto form-check-label text-muted" style="font-size: 110%" for={{index}}>
@@ -41,7 +41,7 @@
         <div class="col-md-4">
             <div class="card" style="height: auto;">
                 <div class="card-body" >
-                    <h4 class="card-title mb-4">Catégorie</h4>
+                    <h4 class="card-title mb-4">Statut</h4>
                     <div class="form-check" *ngFor="let cat of categories; let index = index">
                         <input class="form-check-input" type="checkbox" name="categorie" value={{index}} id="cat_{{index}}">
                         <label class="col-md-auto form-check-label text-muted" style="font-size: 110%" for={{index}}>
@@ -55,7 +55,7 @@
         <div class="col-md-4">
             <div class="card" style="height: auto;">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Conventions</h4>
+                    <h4 class="card-title mb-4">Conventions Collectives</h4>
                     <div class="form-check" *ngFor="let conv of conventions; let index = index">
                         <input class="form-check-input" type="checkbox" name="convention" value={{index}} id="conv_{{index}}">
                         <label class="col-md-auto form-check-label text-muted" style="font-size: 110%" for={{index}}>

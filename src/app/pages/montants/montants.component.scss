@@ -16,6 +16,13 @@ button[type="submit"] {
   margin-top: 8px;
 }
 
+th {
+	column-width: 50%;
+}
+td {
+	column-width: 50%;
+}
+
 .dropdown-toggle {
   cursor: pointer;
 }

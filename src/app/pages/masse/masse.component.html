@@ -2,7 +2,7 @@
   <div class="row mb-4 align-items-center">
     <div class="col-sm-6">
       <div class="page-title-box p-0">
-        <h4 class="mb-0 font-size-18">{{data1['text']}}</h4>
+        <h4 class="mb-0 font-size-18">CONTROLES DE MASSE</h4>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
           <h4 class="card-title mb-4">Liste des bulletins</h4>
 
           <div class="table-responsive">
-            <table class="table mb-0">
+            <table style="width:100%!important; table-layout: fixed;" class="table mb-0">
               <thead class="table-light">
                 <tr>
                   <th>Matricule</th>
@@ -72,3 +72,58 @@
   </div>
 
 </div>
+
+<div>
+  <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
+    <mat-label>Filter {{filter.name}}</mat-label>
+    <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
+      (change)="filterChange(filter,$event)">
+      <option value="">-- Select {{filter.name}} --</option>
+      <option [value]="item" *ngFor="let item of filter.options">{{item}}</option>
+    </select>
+  </mat-form-field>
+  &nbsp;
+  <button mat-flat-button color="warn" (click)="resetFilters()">Reset</button>
+</div>
+
+<table mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> username </th>
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef> phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="website">
+    <th mat-header-cell *matHeaderCellDef> website </th>
+    <td mat-cell *matCellDef="let element"> {{element.website}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> status </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

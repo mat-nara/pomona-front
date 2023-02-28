@@ -7,6 +7,7 @@ import { FlagComponent } from './flag/flag.component';
 import { RubriquesComponent } from './rubriques/rubriques.component';
 import { MontantsComponent } from './montants/montants.component';
 import { BulletinComponent } from './bulletin/bulletin.component';
+import { BulrubriqueComponent } from './bulrubrique/bulrubrique.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { AvereesComponent } from './averees/averees.component';
 import { EchantillonageComponent } from './echantillonage/echantillonage.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'montants', component: MontantsComponent },
   { path: 'averees', component: AvereesComponent },
   { path: 'bulletin', component: BulletinComponent },
+  { path: 'bulrubrique', component: BulrubriqueComponent },
   { path: 'echantillonnage', component: EchantillonageComponent },
   { path: 'administration', component: AdministrationComponent }
 ];
