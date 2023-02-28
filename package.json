@@ -13,17 +13,17 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.1.0",
-    "@angular/animations": "^13.0.1",
+    "@angular/animations": "^14.2.12",
     "@angular/cdk": "^13.3.5",
-    "@angular/common": "~13.0.2",
-    "@angular/compiler": "^13.0.3",
-    "@angular/core": "~13.0.2",
-    "@angular/forms": "~13.0.2",
-    "@angular/localize": "^13.0.2",
+    "@angular/common": "^14.2.12",
+    "@angular/compiler": "^14.2.12",
+    "@angular/core": "^14.2.12",
+    "@angular/forms": "^14.2.12",
+    "@angular/localize": "^14.2.12",
     "@angular/material": "^13.3.5",
-    "@angular/platform-browser": "~13.0.2",
-    "@angular/platform-browser-dynamic": "~13.0.2",
-    "@angular/router": "~13.0.2",
+    "@angular/platform-browser": "^14.2.12",
+    "@angular/platform-browser-dynamic": "^14.2.12",
+    "@angular/router": "^14.2.12",
     "@azure/storage-file-share": "^12.9.0",
     "@ckeditor/ckeditor5-angular": "^2.0.1",
     "@ckeditor/ckeditor5-build-classic": "^26.0.0",
@@ -74,10 +74,10 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^13.3.0",
-    "@angular/cli": "^13.3.8",
-    "@angular/compiler-cli": "~13.0.2",
-    "@angular/language-service": "~13.0.2",
+    "@angular-devkit/build-angular": "^14.2.10",
+    "@angular/cli": "^14.2.10",
+    "@angular/compiler-cli": "^14.2.12",
+    "@angular/language-service": "^14.2.12",
     "@juggle/resize-observer": "^3.3.1",
     "@types/echarts": "^4.9.8",
     "@types/jasmine": "~3.6.0",
@@ -93,6 +93,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~7.0.0",
-    "typescript": "~4.4.4"
+    "typescript": "~4.8.4"
   }
 }

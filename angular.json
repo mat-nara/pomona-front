@@ -138,7 +138,6 @@
       }
     }
   },
-  "defaultProject": "skote",
   "cli": {
     "analytics": false
   }
