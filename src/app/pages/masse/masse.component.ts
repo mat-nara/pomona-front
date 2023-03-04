@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { MasseService } from './masse.service';
 import { Table } from './masse.model';
 import { ApiService } from 'src/app/core/services/api.service';
 import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-masse',
@@ -14,14 +14,15 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class MasseComponent implements OnInit {
   filterValues = {};
-  dataSource = new MatTableDataSource();
+  
   displayedColumns: string[] = ['id', 'name', 'username', 'email', 'phone', 'website', 'status'];
 
   filterSelectObj = [];
 
-
+  remoteDummyData:any=[];
   data1;
   data2 : any = [];
+  dataSource = new MatTableDataSource(this.remoteDummyData);
   dataMasse: any = [];
   tables$: Observable<Table[]>;
   total$: Observable<number>;
