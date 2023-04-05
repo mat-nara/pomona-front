@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
+
 import { MatTableModule } from '@angular/material/table';
 
 @NgModule({

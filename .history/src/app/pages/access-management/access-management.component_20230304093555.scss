@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .users-list {
+    margin-top: 1rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        cursor: pointer;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        &.selected {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+  
+  .access-tree {
+    margin-top: 1rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-top: 0.5rem;
+        input[type=checkbox] {
+          margin-right: 0.5rem;
+        }
+        label {
+          cursor: pointer;
+        }
+        ul {
+          margin-left: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+  

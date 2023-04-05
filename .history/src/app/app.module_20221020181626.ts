@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
-import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { MatTableModule } from '@angular/material/table';
     NgbNavModule,
     NgbModule,
     CoreModule,
-    PagesModule,
-    MatTableModule
+    PagesModule
   ],
   bootstrap: [AppComponent],
   providers: [

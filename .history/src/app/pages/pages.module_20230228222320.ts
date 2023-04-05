@@ -10,7 +10,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { ToastrModule } from 'ngx-toastr';
-import { MatTableModule } from '@angular/material/table';
+
 import { PagesRoutingModule } from './pages-routing.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -27,13 +27,9 @@ import { ConfigurationComponent } from './administration/configuration/configura
 import { AvereesComponent } from './averees/averees.component';
 import { EchantillonageComponent } from './echantillonage/echantillonage.component';
 import { BulrubriqueComponent } from './bulrubrique/bulrubrique.component';
-import { TestcompComponent } from './testcomp/testcomp.component';
-import { AccessManagement2Component } from './access-management2/access-management2.component';
-import { AccessManagementComponent } from './access-management/access-management.component';
-
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent, BulrubriqueComponent, TestcompComponent, AccessManagement2Component, AccessManagementComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent, BulrubriqueComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -43,7 +39,6 @@ import { AccessManagementComponent } from './access-management/access-management
     NgApexchartsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule,
     NgbNavModule,
     NgbTooltipModule,
     NgbCollapseModule,

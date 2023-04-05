@@ -12,7 +12,6 @@ import { AdministrationComponent } from './administration/administration.compone
 import { AvereesComponent } from './averees/averees.component';
 import { EchantillonageComponent } from './echantillonage/echantillonage.component';
 import { TestcompComponent } from './testcomp/testcomp.component';
-import { AccessManagementComponent } from './access-management/access-management.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
@@ -25,8 +24,7 @@ const routes: Routes = [
   { path: 'bulrubrique', component: BulrubriqueComponent },
   { path: 'echantillonnage', component: EchantillonageComponent },
   { path: 'administration', component: AdministrationComponent },
-  { path: 'testcomps', component: TestcompComponent },
-  { path: 'accessm', component: AccessManagementComponent }
+  { path: 'testcomps', component: TestcompComponent }
 ];
 
 @NgModule({

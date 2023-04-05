@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Gestion d'accès</h2>
+    <p>Sélectionnez un utilisateur :</p>
+    <div class="users-list">
+      <ul>
+        <li *ngFor="let user of users" [class.selected]="user === selectedUser" (click)="onSelect(user)">
+          {{ user.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="access-tree">
+      <ul>
+        <li *ngFor="let establishment of establishments">
+          {{ establishment.name }}
+          <ul>
+            <li>
+              <input type="checkbox" id="modify-{{ establishment.id }}" [checked]="userAccess[establishment.id]?.canModify" (change)="onAccessChanged($event, establishment.id, 'modify')" />
+              <label for="modify-{{ establishment.id }}">Modifier</label>
+            </li>
+            <li>
+              <input type="checkbox" id="read-{{ establishment.id }}" [checked]="userAccess[establishment.id]?.canRead" (change)="onAccessChanged($event, establishment.id, 'read')" />
+              <label for="read-{{ establishment.id }}">Consulter</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
