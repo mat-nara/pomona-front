@@ -30,10 +30,11 @@ import { BulrubriqueComponent } from './bulrubrique/bulrubrique.component';
 import { TestcompComponent } from './testcomp/testcomp.component';
 import { AccessManagement2Component } from './access-management2/access-management2.component';
 import { AccessManagementComponent } from './access-management/access-management.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent, BulrubriqueComponent, TestcompComponent, AccessManagement2Component, AccessManagementComponent],
+  declarations: [DashboardComponent, MasseComponent, RubriquesComponent, FlagComponent, MontantsComponent, BulletinComponent, AdministrationComponent, AccessComponent, ConfigurationComponent, AvereesComponent, EchantillonageComponent, BulrubriqueComponent, TestcompComponent, AccessManagement2Component, AccessManagementComponent, LoginComponent],
   imports: [
     CommonModule,
     FormsModule,

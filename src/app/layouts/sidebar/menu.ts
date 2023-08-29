@@ -6,16 +6,21 @@ export const MENU: MenuItem[] = [
     link: '/dashboard',
     icon: 'bx-home'
   },
-  {
+  /*{
     label: 'Contrôles de masse',
     link: '/masse',
     icon: 'bx-scatter-chart'
-  },
+  },*/
   {
     id: 2,
     label: 'Contrôles unitaires',
     icon: 'bx-face',
     subItems: [
+      {
+        label: 'Contrôles de masse',
+        link: '/masse',
+        parentId: 2
+      },
       {
         label: 'Bulletins à flaguer',
         link: '/flag',
